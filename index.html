@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SEI - Precourse</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <script src="confetti.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <script>
+        $(document).ready(function() {
+          var $center = $('.center');
+          var $button = $('<button>Are you beat?</button>');
+
+          var $youreBeat = $(`
+            <h1>
+              <span class='one'>Y</span>
+              <span class='two'>o</span>
+              <span class='three'>u</span>
+              <span class='four'>'</span>
+              <span class='five'>r</span>
+              <span class='six'>e</span>
+              <br>
+              <span class='seven'>B</span>
+              <span class='eight'>e</span>
+              <span class='nine'>a</span>
+              <span class='ten'>t</span>
+              <span class='eleven'>!</span>
+            </h1>
+          `);
+
+          $button.on('click', function() {
+            $center.html('');
+            $youreBeat.appendTo($center);
+            confetti.start();
+          });
+          $button.appendTo($center);
+        });
+      </script>
+    </div>
+  </div>
+</body>
+</html>
